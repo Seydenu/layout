@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <button><a href="flexbox.html">Flexbox Summary</a></button>
+	<title>Layouts</title>
+	<style type="text/css">
+		h1, h3, h5 {
+			text-align: center;
+			text-decoration: none;
+			color: darkgreen;
+		}
+
+		button {
+			font-family: cursive;
+			font-size: 35px;
+		}
+
+		button a {
+			text-decoration: none;
+			color: darkcyan;
+		}
+
+		h5 {
+			text-decoration: underline;
+		}
+
+		body {
+			padding: 20px;
+			background-color: aliceblue;
+		}
+
+		p {
+			padding: 10px;
+		}
+	</style>
+</head>
+<body>
+<h1>Layout</h1>
+
+<h3>History of Layout</h3>
+
+<p>CSS has evolved as our needs for web design and browser technology have evolved.</p>
+<p><strong>CSS layouts over the time:</strong></p>
+
+<ul>
+	<li>1996 - CSS 1, Floats</li>
+	<li>1998 - CSS 2</li>
+	<li>2010 - CSS 3, REsponsive Web Design</li>
+	<li>2012 - Media Queries, Flexbox</li>
+	<li>2017 - Grid</li>
+	<li>2019 - Instrinsic Web Design</li>
+	<li>2021 - Container Queries</li>
+</ul>
+
+<h3>Understanding the display property </h3>
+
+<p>The display property does two things. And the two things are: <strong>1) It determine if the box it is applied to acts as inline or block.</strong> and <strong>2) The display property also determines how an element's children should behave.</strong></p>
+
+<h3>Flexbox and Grid</h3>
+
+<p>Flexbox and Grid are the two main layout mechanisms that create layout rules for multiple elements</p>
+
+<h5>Flexbox</h5>
+
+<p>Flexbox is a layout mechanism for one-dimensional layouts. Layout across a single axis, either horizontally or vertically. By default, flexbox will align the element's children next to each other, in the inline direction, and stretch them in the block direction, so they're all the same height. Flexbox also converts the child elements to be flex items, which means you can write rules on how they behave inside a flex container. The flex property is a shorthand for "flex-grow", "flex-shrink" and "flex-basis".</p>
+
+<h5>Grid </h5>
+
+<p>Grid is similar in a lot of ways to flexbox, but it is designed to control multi-axis layouts instead of single-axis layouts (vertical or horizontal space). One useful grid unit is the fr unit—which is a fraction of remaining space—you can build traditional 12 column grids, with a gap between each item, with 3 CSS properties. <strong>ex: .my-element {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 1rem;
+}
+</strong></p>
+
+<h5>Flow layout</h5>
+
+<p>With inline-block you can cause surrounding elements not to respect block margin and padding on an inline element <strong>ex: p span {
+	display: inline-block;
+}
+</strong></p>
+
+<h3>Floats</h3>
+<p>With floats, if you have an image that sits within a paragraph of text, you can make the text to wrap around the image. <strong>ex: img {
+	float: left;
+	margin-right: 1em;
+};
+</strong>In this example, the image is instructed to float left, which then allows sibling elements to "wrap" around it.</p>
+
+<h3>Positioning </h3>
+
+<p>The position property changes how an element behaves in the normal flow of the document, and how it relates to other elements. The available options are "relative", "absolute", "fixed" and "sticky" with the default value being static.<strong>ex: .my-element {
+  position: relative;
+  top: 10px;
+}
+</strong></p>
+
+<p>When you set position to absolute, it breaks the element out of the current document flow. This means two things:</p>
+<ul>
+	<li>You can position this element wherever you like, using top, right, bottom and left in its nearest relative parent.</li>
+	<li>All of the content surrounding an absolute element reflows to fill the remaining space left by that element.</li>
+</ul>
+
+</body>
+</html>
